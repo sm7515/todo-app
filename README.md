@@ -7,4 +7,6 @@
 	* delete tasks
 	* view/hide all completed tasks
 
+
+### Demo
 ![alt test](demo.gif)
