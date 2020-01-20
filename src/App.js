@@ -3,6 +3,8 @@ import Todos from "./Components/Todos";
 import AddTodo from "./Components/AddTodo";
 import ShowComplete from './Components/ShowComplete';
 
+import './App.css';
+
 function App() {
 
   let [todos, setTodos]=useState([]);

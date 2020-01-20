@@ -12,11 +12,11 @@ export default function Todos({ todos, completeTodo, deleteTodo}){
         todos.map(todo=>{
             return(
                 !todo.complete&&
-                <label className='collection-item' key={todo.id}>
-                    <input type="checkbox"/>
+                <div className='collection-item' key={todo.id}>
+                    <input type="checkbox" className="filled-in"/>
                     <span onClick={() => completeTodo(todo.id)}>{todo.content}</span>
                     <button class="btn-floating btn-small waves-effect waves-light red" onClick={()=>deleteTodo(todo.id)}><i class="material-icons">close</i></button>
-                </label>
+                </div>
             )
         })
     ):(

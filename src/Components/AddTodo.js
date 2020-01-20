@@ -13,7 +13,11 @@ export default function AddTodo({addTodo}){
     return (
         <div className='todo-input'>
             <form onSubmit={e => handleSubmit(e)}>
-                <input type='text' name='todoInput'></input>
+                <div className="input-field">
+                    <i class="material-icons prefix">event</i>
+                    <input type='text' name='todoInput' class="validate"></input>
+                    <label htmlFor="todoInput" className="active">Add a todo</label>
+                </div>
             </form>
         </div>
     )

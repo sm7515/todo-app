@@ -12,18 +12,20 @@ export default function ShowComplete({ todos, completeTodo,deleteTodo}){
 
     return (
         <div>
-            {show&& todos.length !== 0 &&
-                todos.map(todo => {
-                    return (
-                        todo.complete &&
-                        <label className='collection-item' key={todo.id}>
-                            <input type="checkbox" checked={true} />
-                            <span onClick={() => completeTodo(todo.id)}>{todo.content}</span>
-                            <button class="btn-floating btn-small waves-effect waves-light red lighten-3" onClick={() => deleteTodo(todo.id)}><i class="material-icons">close</i></button>
-                        </label>
-                    )
-                })}
-            <button class="waves-effect waves-light btn" onClick={() => handleClick()}>
+            <div className="collection">
+                {show && todos.length !== 0 &&
+                    todos.map(todo => {
+                        return (
+                            todo.complete &&
+                            <label className='collection-item' key={todo.id}>
+                                <input type="checkbox" className="filled-in" checked={true} />
+                                <span onClick={() => completeTodo(todo.id)} className="todo-done grey-text text-lighten-1">{todo.content}</span>
+                                <button class="btn-floating btn-small waves-effect waves-light red lighten-3" onClick={() => deleteTodo(todo.id)}><i class="material-icons">close</i></button>
+                            </label>
+                        )
+                    })}
+            </div>
+            <button className="waves-effect waves-light btn" onClick={() => handleClick()}>
                 {show? `hide complete`: `show complete`}
             </button>
         </div>
